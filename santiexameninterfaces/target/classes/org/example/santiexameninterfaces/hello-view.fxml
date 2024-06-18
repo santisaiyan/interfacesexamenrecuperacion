@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="481.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.santiexameninterfaces.HelloController">
+    <center>
+        <VBox alignment="CENTER" prefHeight="492.0" prefWidth="673.0" spacing="20.0" style="-fx-background-color: #ff99cc;">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <TableView fx:id="tablaAlumnos" prefHeight="333.0" prefWidth="546.0">
+                    <columns>
+                        <TableColumn fx:id="columnanombre" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="columnaapellido" prefWidth="64.00000762939453" text="Apellido" />
+                        <TableColumn fx:id="columnaad" prefWidth="47.199951171875" text="AD" />
+                        <TableColumn fx:id="columnasge" minWidth="8.0" prefWidth="33.60003662109375" text="SGE" />
+                        <TableColumn fx:id="columnadi" prefWidth="40.800048828125" text="DI" />
+                        <TableColumn fx:id="columnapmdm" prefWidth="53.5999755859375" text="PMDM" />
+                        <TableColumn fx:id="columnapsp" prefWidth="61.5999755859375" text="PSP" />
+                        <TableColumn minWidth="0.0" prefWidth="0.0" text="EIE" />
+                        <TableColumn fx:id="columnaeie" minWidth="0.0" prefWidth="36.0" text="EIE" />
+                        <TableColumn fx:id="columnahlc" prefWidth="71.20001220703125" text="HLC" />
+                        <TableColumn fx:id="columnamedia" prefWidth="94.39996337890625" text="MEDIA" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <VBox alignment="CENTER" prefHeight="451.0" prefWidth="208.0" spacing="10.0" style="-fx-background-color: #33ccff;" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="27.0" prefWidth="148.0" style="-fx-background-color: pink;" text="Agregar alumno">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <GridPane alignment="CENTER" prefHeight="273.0" prefWidth="110.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label prefHeight="18.0" prefWidth="59.0" text="Nombre" textFill="WHITE" />
+                        <Label text="apellido" textFill="WHITE" GridPane.rowIndex="1" />
+                        <Label text="AD" textFill="WHITE" GridPane.rowIndex="2" />
+                        <Label text="SGE" textFill="WHITE" GridPane.rowIndex="3" />
+                        <Label text="DI" textFill="WHITE" GridPane.rowIndex="4" />
+                        <Label text="PMDM" textFill="WHITE" GridPane.rowIndex="5" />
+                        <Label text="PSP" textFill="WHITE" GridPane.rowIndex="6" />
+                        <Label text="EIE" textFill="WHITE" GridPane.rowIndex="7" />
+                        <Label text="HLC" textFill="WHITE" GridPane.rowIndex="8" />
+                        <Label textFill="WHITE" />
+                        <Label text="MEDIA" textFill="WHITE" GridPane.rowIndex="9" />
+                        <TextField fx:id="nombre" GridPane.columnIndex="1" />
+                        <TextField fx:id="apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Spinner fx:id="AD" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Spinner fx:id="SGE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Spinner fx:id="DI" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Spinner fx:id="PMDM" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Spinner fx:id="PSP" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Spinner fx:id="EIE" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Spinner fx:id="HLC" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Spinner fx:id="MEDIA" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                    </children>
+                </GridPane>
+                <Button fx:id="botondescarga" mnemonicParsing="false" onAction="#descargarreporte" text="Descargar" textAlignment="CENTER" />
+                <Button fx:id="botonañadir" mnemonicParsing="false" onAction="#añadir" text="Añadir" />
+                <Button fx:id="botonsalir" contentDisplay="CENTER" mnemonicParsing="false" onAction="#salir" text="Salir" textAlignment="CENTER" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </VBox>
+    </left>
+    <top>
+        <FlowPane alignment="CENTER" prefHeight="74.0" prefWidth="794.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label contentDisplay="CENTER" prefHeight="43.0" prefWidth="230.0" text="Notas dam" textFill="#002858">
+                    <font>
+                        <Font name="System Bold" size="29.0" />
+                    </font>
+                </Label>
+            </children>
+        </FlowPane>
+    </top>
+</BorderPane>
